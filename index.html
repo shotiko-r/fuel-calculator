@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>საწვავის ხარჯების კალკულატორი</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h2>საწვავის ხარჯების კალკულატორი</h2>
+
+  <div class="flex-row">
+    <div class="flex-col">
+      <label for="date">თარიღი</label>
+      <input type="date" id="date">
+
+      <label for="startKm">საწყისი კმ</label>
+      <input type="number" id="startKm">
+
+      <label for="endKm">საბოლოო კმ</label>
+      <input type="number" id="endKm">
+
+      <label for="gasUsage">გაზის ხარჯი (ლ/100კმ)</label>
+      <input type="number" id="gasUsage">
+
+      <label for="gasPrice">გაზის ფასი (₾)</label>
+      <input type="number" id="gasPrice">
+
+      <label for="petrolUsage">ბენზინის ხარჯი (ლ/100კმ)</label>
+      <input type="number" id="petrolUsage">
+
+      <label for="petrolPrice">ბენზინის ფასი (₾)</label>
+      <input type="number" id="petrolPrice">
+
+      <label for="personalKm">პირადი კმ (არასავალდებულო)</label>
+      <input type="number" id="personalKm">
+
+      <button onclick="calculate()">გამოთვლა</button>
+      <button class="export-btn" onclick="exportToCSV()">CSV ექსპორტი</button>
+      <button class="danger-btn" onclick="clearHistory()">წაშლა</button>
+    </div>
+  </div>
+
+  <div class="result" id="resultArea"></div>
+  <div class="history" id="historyArea"></div>
+  <div class="summary" id="summaryArea"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
